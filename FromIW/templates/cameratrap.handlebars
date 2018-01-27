@@ -1,0 +1,63 @@
+<section class="trapwrapper padded">
+
+    <div>
+        <a class="mapbutton" href="wrapper.html"> &lt; MAP</a>
+    </div>
+    <div class="trapimage">
+
+        <!--   The below Handlebars loop shows every camera trap image for the location. The below style hides (via CSS) everything but the first one. Client side logic will eventually change the order of these so that different items become the first.   -->
+
+        <style>
+            .camera-trap-image {
+                display: none;
+            }
+
+            .camera-trap-image:first-of-type {
+                display: block;
+            }
+
+        </style>
+
+        {{#each location.captures}}
+        <img class="camera-trap-image" alt="Camera trap image {{@key}}" src="{{this.image}}" /> {{/each}}
+
+    </div>
+    <div class="traptext">{{{text.cameratrap}}}</div>
+</section>
+
+
+<div class="buttonwrapper">
+    <section class="buttonlist">
+        {{#each location.species}}
+        <button class="animalbutton">
+          <fig>
+            <img alt="{{this.title}}" title="{{this.title}}" src="{{this.image}}" />
+            <figcaption>{{this.title}}</figcaption>
+          </fig>
+        </button> {{/each}}
+    </section>
+</div>
+
+
+<!--
+<form>
+
+    <div>
+        <label for="animal1">Name<a href="moreinfo">i</a></label>
+        <button name="animal1" style="background-image:url(image)"></button>
+    </div>
+
+    <div>
+        <label for="animal2">Animal2<a href="moreinfo">i</a></label>
+        <button name="animal2" style="background-image:url(image)"></button>
+    </div>
+
+</form>
+
+<style>
+    button {
+        background-position: center;
+        background-size: contain;
+    }
+
+</style>-->
