@@ -1,0 +1,137 @@
+/* Global + Resets */
+
+body * {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+
+
+/* Main layout */
+
+body {
+    display: flex;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+main section {
+    background-color: black;
+    color:aliceblue;
+}
+
+.sidebar {
+    width: 20%;
+    font-size: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.buttonwrapper {
+    order: 2;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.padded {
+    padding: 0.5em;
+}
+
+
+/* Specific Styles */
+
+button {
+    border: none;
+}
+
+.animalbutton {
+    padding: 0.25em;
+    font-size: 1.5vw;
+}
+
+.trapwrapper {
+    order: 1;
+    display: block;
+    flex-direction: row;
+    width: 80%;
+}
+
+/*.trapwrapper div {
+    display: block;
+}*/
+
+.trapimage {
+    order: 1;
+}
+
+.traptext {
+    order: 2;
+}
+
+.mapbutton {
+    padding: 0.5em 0.5em 0.5em 0.25em;
+    background-color:aliceblue;
+    color: black;
+    position:absolute;
+    top: 24px; left: 8px;
+}
+
+
+.buttonlist {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+/*CALL TO ACTION*/
+
+section.toggle div.hover {
+    display: none;
+}
+
+section.toggle:hover div.nohover {
+    display: none;
+
+}
+
+section.toggle:hover div.hover {
+    display: block;
+}
+
+div.nohover p {
+    background-color: grey;
+    color: lightgoldenrodyellow;
+    padding: 1em;
+}
+
+.qr-code {
+    float: left;
+    margin: 0px;
+    width: 50%;
+    text-align: center;
+}
