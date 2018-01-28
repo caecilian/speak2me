@@ -6,7 +6,7 @@ body * {
 }
 
 img {
-    max-width: 100%;
+    max-width: 20%;
 }
 
 /* Main layout */
@@ -19,21 +19,30 @@ body {
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
+/*    display: flex;
+    flex-direction: column;*/
+    width: 90%;
     justify-content: space-around;
 }
 
  {
 }
 
-.buttonwrapper {
-    order: 2;
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
+.helplist {
+    width: 80%;
+    flex-direction: row;
+    margin: 2px;
+}
+
+section.buttonwrapper {
+    display: inline;
+    grid-template-rows: 50% 50%;
+    justify-content: center;
+}
+
+section.buttonwrapper a {
+    padding: 2px;
+    justify-content: center;
 }
 
 .padded {
@@ -44,15 +53,18 @@ main {
 /* Specific Styles */
 
 h1 {
-    font-size: 4vw;
+    font-size: 2.5vw;
+}
+h2 {
+    font-size: 2vw;
 }
 button {
     border: none;
 }
 
 .helplist {
-    padding: 1em;
-    font-size: 3vw;
+    padding: 2em;
+    font-size: 1vw;
     background-color: aliceblue;
     color:darkslategrey;
     justify-content: center;

@@ -1,5 +1,5 @@
 // Initial page load
 
-loadHandlebarsTemplate("map", "main");
+loadHandlebarsTemplate("flags", "main");
 
 loadHandlebarsTemplate("sidebar", "aside");
